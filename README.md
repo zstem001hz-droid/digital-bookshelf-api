@@ -54,4 +54,47 @@ digital-bookshelf-api/
 
 ---
 
+## API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | /api/books | Create a new book |
+| GET | /api/books | Retrieve all books |
+| GET | /api/books/:id | Retrieve a single book by ID |
+
+---
+
+## Usage Examples
+
+### Create a Book
+```http
+POST /api/books
+Content-Type: application/json
+
+{
+  "title": "To Kill a Mockingbird",
+  "author": "Harper Lee",
+  "isbn": "9780061935466",
+  "publishedDate": "1960-07-11",
+  "inStock": true
+}
+```
+
+### Get All Books
+```http
+GET /api/books
+```
+
+### Get a Single Book
+```http
+GET /api/books/:id
+```
+
+---
+
+## Testing
+
+All endpoints can be tested using [Postman](https://www.postman.com). Import the collection and set the base URL to `http://localhost:3001`.
+
+
 > 🚧 Work in progress
