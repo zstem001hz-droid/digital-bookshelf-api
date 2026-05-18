@@ -1,6 +1,6 @@
 // Requirements
 const express = require("express");
-const router = expresss.Router();
+const router = express.Router();
 const Book = require("../models/Book");
 
 // Create - POST
