@@ -15,6 +15,7 @@ A RESTful API for managing a library's book inventory, built with Node.js, Expre
 
 ## Project Structure
 
+```
 digital-bookshelf-api/
 ├── db/
 │   └── connection.js
@@ -27,6 +28,7 @@ digital-bookshelf-api/
 ├── package.json
 ├── README.md
 └── server.js
+```
 
 ---
 
@@ -96,5 +98,6 @@ GET /api/books/:id
 
 All endpoints can be tested using [Postman](https://www.postman.com). Import the collection and set the base URL to `http://localhost:3001`.
 
+---
 
 > 🚧 Work in progress
