@@ -63,6 +63,7 @@ digital-bookshelf-api/
 | POST | /api/books | Create a new book |
 | GET | /api/books | Retrieve all books |
 | GET | /api/books/:id | Retrieve a single book by ID |
+| PUT | /api/books/:id | Update a book by ID |
 
 ---
 
@@ -90,6 +91,16 @@ GET /api/books
 ### Get a Single Book
 ```http
 GET /api/books/:id
+```
+
+### Update a Book
+```http
+PUT /api/books/:id
+Content-Type: application/json
+
+{
+  "title": "Updated Title"
+}
 ```
 
 ---
