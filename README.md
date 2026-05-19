@@ -117,4 +117,18 @@ All endpoints can be tested using [Postman](https://www.postman.com). Import the
 
 ---
 
-> 🚧 Work in progress
+---
+
+## Reflection
+
+**1. Why is it beneficial to separate your routes, models, and database connection into different directories?**
+
+Separating concerns into distinct directories makes the codebase easier to read, maintain, and scale. Each file has a single responsibility — `connection.js` handles the database, `Book.js` defines the data structure, and `bookRoutes.js` handles the API logic. This modularity means changes to one area don't risk breaking another, and new team members can navigate the project structure intuitively.
+
+**2. What is the difference between `PUT` and `PATCH` HTTP methods, and which one does your `PUT /:id` endpoint more closely resemble?**
+
+`PUT` replaces an entire resource with new data, while `PATCH` applies a partial update to specific fields only. Despite using the `PUT` method, this endpoint more closely resembles `PATCH` behavior — it only updates the fields provided in `req.body` rather than replacing the entire document. This is because `findByIdAndUpdate` in Mongoose applies partial updates by default.
+
+**3. In the `DELETE` route, what is a good practice for the response you send back after a successful deletion? Should you send the deleted object, a simple success message, or something else? Why?**
+
+A simple success message is generally the best practice — once a resource is deleted it no longer exists, so returning it could be misleading. A clear confirmation message like `{ message: "Book successfully deleted" }` tells the client the operation succeeded without implying the resource still exists. Some APIs return a `204 No Content` status with no body, which is also a widely accepted convention for DELETE responses.
