@@ -64,6 +64,7 @@ digital-bookshelf-api/
 | GET | /api/books | Retrieve all books |
 | GET | /api/books/:id | Retrieve a single book by ID |
 | PUT | /api/books/:id | Update a book by ID |
+| DELETE | /api/books/:id | Delete a book by ID |
 
 ---
 
@@ -101,6 +102,11 @@ Content-Type: application/json
 {
   "title": "Updated Title"
 }
+```
+
+### Delete a Book
+```http
+DELETE /api/books/:id
 ```
 
 ---
